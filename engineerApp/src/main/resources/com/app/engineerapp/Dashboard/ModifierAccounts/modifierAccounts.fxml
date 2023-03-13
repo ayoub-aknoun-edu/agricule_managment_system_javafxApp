@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="414.0" style="-fx-background-radius: 40; -fx-background-color: #8FDAFA;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.engineerapp.Dashboard.ModifierAccounts.ModifierAccountsController">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="103.0" layoutY="14.0" prefHeight="53.0" prefWidth="225.0" text="modifier compte">
+            <font>
+                <Font name="Gabriola" size="43.0" />
+            </font>
+        </Label>
+        <ScrollPane layoutX="10.0" layoutY="81.0" prefHeight="415.0" prefWidth="403.0" style="-fx-background-color: #8FDAFA;">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="388.0" style="-fx-background-color: #8FDAFA;">
+                    <children>
+                        <JFXTextField fx:id="inpCNI" focusColor="#2012ee" layoutX="31.0" layoutY="22.0" opacity="0.72" prefHeight="45.0" prefWidth="140.0" promptText="C.N.I" unFocusColor="#0f9a9a">
+                            <font>
+                                <Font name="HoloLens MDL2 Assets" size="21.0" />
+                            </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="inpName" focusColor="#2012ee" layoutX="29.0" layoutY="83.0" opacity="0.72" prefHeight="45.0" prefWidth="140.0" promptText="Nom" unFocusColor="#0f9a9a">
+                            <font>
+                                <Font name="HoloLens MDL2 Assets" size="20.0" />
+                            </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="inpPrenom" focusColor="#2012ee" layoutX="204.0" layoutY="84.0" opacity="0.72" prefHeight="45.0" prefWidth="147.0" promptText="Prénom" unFocusColor="#0f9a9a">
+                            <font>
+                                <Font name="HoloLens MDL2 Assets" size="19.0" />
+                            </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="inpTele" focusColor="#2012ee" layoutX="30.0" layoutY="146.0" opacity="0.72" prefHeight="50.0" prefWidth="248.0" promptText="Numéro de téléphone" unFocusColor="#0f9a9a">
+                            <font>
+                                <Font name="HoloLens MDL2 Assets" size="20.0" />
+                            </font>
+                        </JFXTextField>
+                        <DatePicker fx:id="datePicker1" layoutX="219.0" layoutY="225.0" prefHeight="35.0" prefWidth="160.0" />
+                        <DatePicker fx:id="datePicker2" layoutX="219.0" layoutY="265.0" prefHeight="35.0" prefWidth="160.0" />
+                        <JFXTextField fx:id="inpEmail" focusColor="#2012ee" layoutX="37.0" layoutY="354.0" opacity="0.72" prefHeight="45.0" prefWidth="315.0" promptText="E-mail" unFocusColor="#0f9a9a">
+                            <font>
+                                <Font name="HoloLens MDL2 Assets" size="21.0" />
+                            </font>
+                        </JFXTextField>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="212.0" prefHeight="60.0" prefWidth="193.0" text="Date de naissance" textFill="#000000b2">
+                            <font>
+                                <Font name="Constantia Italic" size="23.0" />
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="253.0" prefHeight="60.0" prefWidth="193.0" text="Date d' embauche" textFill="#000000b2">
+                            <font>
+                                <Font name="Constantia Italic" size="23.0" />
+                            </font>
+                        </Label>
+                        <JFXCheckBox fx:id="chk1" checkedColor="#24579e" layoutX="141.0" layoutY="303.0" prefHeight="43.0" prefWidth="68.0" text="H" textFill="#000000b2" unCheckedColor="#595959">
+                            <font>
+                                <Font name="Constantia" size="21.0" />
+                            </font>
+                        </JFXCheckBox>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="294.0" prefHeight="60.0" prefWidth="116.0" text="Genre :" textFill="#000000b2">
+                            <font>
+                                <Font name="Constantia Italic" size="23.0" />
+                            </font>
+                        </Label>
+                        <JFXCheckBox fx:id="chk2" checkedColor="#24579e" layoutX="260.0" layoutY="303.0" prefHeight="43.0" prefWidth="68.0" text="F" textFill="#000000b2" unCheckedColor="#595959">
+                            <font>
+                                <Font name="Constantia" size="21.0" />
+                            </font>
+                        </JFXCheckBox>
+                        <JFXComboBox fx:id="responsableName" layoutX="186.0" layoutY="462.0" prefHeight="25.0" prefWidth="182.0" />
+                        <Label fx:id="respoLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="462.0" text="Responsable :">
+                            <font>
+                                <Font name="Constantia Italic" size="23.0" />
+                            </font>
+                        </Label>
+                  <Label fx:id="forgetPassword" alignment="CENTER" contentDisplay="CENTER" layoutX="32.0" layoutY="402.0" onMouseClicked="#forgetPasswordEvent" prefHeight="60.0" prefWidth="324.0" text="Modifie mot de pass ?" textFill="#bf1b1bb2" underline="true">
+                     <font>
+                        <Font name="Constantia Italic" size="23.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+        <JFXButton fx:id="createAccount" buttonType="RAISED" layoutX="253.0" layoutY="513.0" prefHeight="50.0" prefWidth="138.0" style="-fx-background-color: #95F985; -fx-background-radius: 40;" text="modifier compte">
+            <font>
+                <Font name="Comic Sans MS Bold" size="13.0" />
+            </font>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="26.0" layoutY="513.0" onMouseClicked="#menuBack" prefHeight="50.0" prefWidth="116.0" style="-fx-background-color: #DF6F6F; -fx-background-radius: 40;" text="Menu principal">
+            <font>
+                <Font name="Comic Sans MS Bold" size="13.0" />
+            </font>
+        </JFXButton>
+        <Label fx:id="incorrectLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="61.0" layoutY="68.0" prefHeight="27.0" prefWidth="301.0" style="-fx-background-color: EF0C3C; -fx-background-radius: 2em;" text="username ou mot de pass incorrect" textFill="#ffe6e6">
+            <font>
+                <Font name="Gabriola" size="22.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="loadingimj" fitHeight="46.0" fitWidth="45.0" layoutX="322.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../img/loading.gif" />
+            </image>
+        </ImageView>
+    </children>
+</Pane>

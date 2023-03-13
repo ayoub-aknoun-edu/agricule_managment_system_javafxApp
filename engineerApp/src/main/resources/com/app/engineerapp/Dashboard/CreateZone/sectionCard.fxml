@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane fx:id="sectionPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="552.0" style="-fx-background-color: #BFBAB9; -fx-background-radius: 15;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.engineerapp.Dashboard.CreateZone.SectionCardController">
+   <children>
+      <VBox layoutX="3.0" layoutY="32.0" prefWidth="543.0" />
+      <JFXTextField alignment="CENTER" layoutX="143.0" layoutY="2.0" prefHeight="25.0" prefWidth="261.0" promptText="Titre" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" />
+   </padding>
+</Pane>

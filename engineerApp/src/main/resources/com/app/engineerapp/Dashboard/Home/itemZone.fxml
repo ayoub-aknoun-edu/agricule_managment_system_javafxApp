@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="191.0" prefWidth="192.0" style="-fx-background-radius: 30;" stylesheets="@../../styles/style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.engineerapp.Dashboard.Home.ItemZoneController">
+   <children>
+      <ImageView disable="true" fitHeight="178.0" fitWidth="192.0" opacity="0.83" pickOnBounds="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);;">
+         <image>
+            <Image url="@../../img/Hand%20Painted%20Beautiful%20Small%20Clear%20Green%20Leaf%20Minimalist%20Background.jpg" />
+         </image>
+         <effect>
+            <Glow level="0.4" />
+         </effect>
+      </ImageView>
+      <Label fx:id="zoneId" layoutX="15.0" layoutY="13.0" prefHeight="37.0" prefWidth="162.0" text="Zone : #" textFill="#e14545">
+         <font>
+            <Font name="Corbel Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="63.0" prefHeight="21.0" prefWidth="122.0" text="Examineur">
+         <font>
+            <Font name="Consolas Bold" size="16.0" />
+         </font></Label>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="-2.0" layoutY="153.0" onAction="#click" prefHeight="37.0" prefWidth="192.0" style="-fx-background-color: #6bdc9e; -fx-background-radius: 30;" text="Select" textFill="#544040">
+         <font>
+            <Font name="Consolas Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="20.0" layoutY="107.0" prefHeight="18.0" prefWidth="111.0" text="Date exam :">
+         <font>
+            <Font name="Consolas Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="tecName" layoutX="52.0" layoutY="83.0" prefHeight="21.0" prefWidth="122.0" text="nomExa">
+         <font>
+            <Font name="Consolas Italic" size="17.0" />
+         </font></Label>
+      <Label fx:id="examDate" layoutX="51.0" layoutY="126.0" prefHeight="18.0" prefWidth="122.0" text="dateEx">
+         <font>
+            <Font name="Consolas Italic" size="17.0" />
+         </font></Label>
+   </children>
+   <styleClass>
+      <String fx:value="fruit-item" />
+      <String fx:value="shadow" />
+   </styleClass>
+</AnchorPane>

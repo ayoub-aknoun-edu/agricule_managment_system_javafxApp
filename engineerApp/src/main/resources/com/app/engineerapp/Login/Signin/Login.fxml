@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="601.0" prefWidth="783.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.engineerapp.Login.Signin.LoginController">
+	<children>
+		<AnchorPane layoutX="-8.0" layoutY="33.0" prefHeight="521.0" prefWidth="795.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="33.0">
+			<children>
+				<AnchorPane fx:id="pane" layoutX="327.0" layoutY="47.0" maxWidth="446.0" prefHeight="427.0" prefWidth="446.0" style="-fx-background-color: #87bcea; -fx-background-radius: 1em;" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="327.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="47.0">
+					<children>
+						<Label alignment="CENTER" contentDisplay="CENTER" layoutX="112.0" layoutY="27.0" prefHeight="53.0" prefWidth="171.0" text="Sign In" AnchorPane.leftAnchor="112.0" AnchorPane.rightAnchor="128.0" AnchorPane.topAnchor="27.0">
+							<font>
+								<Font name="Gabriola" size="43.0" />
+							</font>
+						</Label>
+						<JFXTextField fx:id="inpName" focusColor="#2012ee" labelFloat="true" layoutX="89.0" layoutY="119.0" opacity="0.72" prefHeight="50.0" prefWidth="338.0" promptText="Email" unFocusColor="#3cd7d7" AnchorPane.leftAnchor="89.0" AnchorPane.rightAnchor="19.0">
+                     <font>
+                        <Font name="HoloLens MDL2 Assets" size="24.0" />
+                     </font></JFXTextField>
+						<JFXPasswordField fx:id="inpPassword" focusColor="#720e94" layoutX="89.0" layoutY="175.0" prefHeight="46.0" prefWidth="300.0" promptText="mot de pass" unFocusColor="BLACK" AnchorPane.leftAnchor="89.0" AnchorPane.rightAnchor="57.0">
+                     <font>
+                        <Font name="Consolas" size="22.0" />
+                     </font></JFXPasswordField>
+						<JFXButton fx:id="btnSignIn" buttonType="RAISED" disable="true" layoutX="157.0" layoutY="282.0" onAction="#tryConnect" prefHeight="42.0" prefWidth="165.0" ripplerFill="WHITE" style="-fx-background-color: grey; -fx-background-radius: 1em;" text="Se connecter">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="20.0" />
+                     </font>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                        </Lighting>
+                     </effect></JFXButton>
+                  <JFXButton fx:id="closeBtn" layoutX="37.0" layoutY="324.0" onAction="#closeSlider" prefHeight="78.0" prefWidth="110.0" rotate="180.0" style="-fx-background-radius: 2em;" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="70.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/sahm_limen.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Label fx:id="incorrectLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="32.0" layoutY="1.0" prefHeight="26.0" prefWidth="405.0" style="-fx-background-color: EF0C3C; -fx-background-radius: 2em;" text="email ou mot de pass incorrect" textFill="#ffe6e6">
+                     <font>
+                        <Font name="Gabriola" size="22.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="loadingimj" fitHeight="46.0" fitWidth="45.0" layoutX="281.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/loading.gif" />
+                     </image>
+                  </ImageView>
+                        <ImageView fitHeight="34.0" fitWidth="38.0" layoutX="36.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+
+                            <image>
+                                <Image url="@../../img/user.png" />
+                            </image>
+                        </ImageView>
+
+                  <ImageView fitHeight="40.0" fitWidth="45.0" layoutX="36.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../img/password.png" />
+                        </image>
+                    </ImageView>
+                  <JFXTextField fx:id="inpPasswordShower" focusColor="#2012ee" layoutX="89.0" layoutY="178.0" prefHeight="42.0" prefWidth="300.0" promptText="mot de pass" unFocusColor="#750f6f">
+                     <font>
+                        <Font name="Consolas" size="22.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="hidePassword" layoutX="390.0" layoutY="185.0" prefHeight="34.0" prefWidth="40.0" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/eyeClosed.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="showPassword" layoutX="389.0" layoutY="178.0" prefHeight="40.0" prefWidth="45.0" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/eyeOpened.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Pane fx:id="paneForgot" layoutX="174.0" layoutY="324.0" onMouseClicked="#passwordForgottenWindow" onMouseEntered="#forgotHover" onMouseExited="#forgotHoverExited" prefHeight="27.0" prefWidth="131.0" style="-fx-border-radius: 1em; -fx-background-radius: 40px;">
+                     <children>
+                        <Text fx:id="txtForgot" fill="#e81717" layoutX="3.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe oublié">
+                           <font>
+                              <Font name="Arial Italic" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+                  <JFXComboBox fx:id="combo" layoutX="295.0" layoutY="239.0" prefHeight="34.0" prefWidth="110.0" style="-jfx-focus-color: #2012ee; -jfx-unfocus-color: #3cd7d7;" />
+                  <Label layoutX="82.0" layoutY="241.0" opacity="0.57" prefHeight="34.0" prefWidth="206.0" text="se connecter en tant qu" textFill="#250909">
+                     <font>
+                        <Font name="Consolas" size="16.0" />
+                     </font>
+                  </Label>
+					</children>
+               <effect>
+                  <DropShadow />
+               </effect>
+				</AnchorPane>
+				<AnchorPane layoutX="6.0" layoutY="33.0" prefHeight="455.0" prefWidth="348.0" style="-fx-background-color: linear-gradient(to bottom, rgba(166,206,244,1) 0%,rgba(58,149,224,1) 33%,rgba(21,125,211,1) 65%,rgba(47,106,224,1) 100%,rgba(83,159,225,1) 100%,rgba(135,188,234,1) 100%);; -fx-background-radius: 1em;" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="33.0">
+					<children>
+						<VBox alignment="CENTER_LEFT" layoutX="76.0" layoutY="84.0" prefHeight="455.0" prefWidth="256.0" style="-fx-background-radius: 1em;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+							<children>
+                        <Pane prefHeight="356.0" prefWidth="256.0">
+                           <children>
+      								<Label layoutX="-8.0" layoutY="126.0" prefHeight="52.0" prefWidth="177.0" text="AGRIC" textFill="#0a0a0a">
+      									<font>
+      										<Font name="Comic Sans MS Bold" size="37.0" />
+      									</font>
+      								</Label>
+      								<Label layoutX="-38.0" layoutY="205.0" prefHeight="27.0" prefWidth="279.0" text="Gestions des zones">
+      									<font>
+      										<Font name="Courier New Bold Italic" size="22.0" />
+      									</font>
+      								</Label>
+                              <JFXButton fx:id="openBtn" layoutX="104.0" layoutY="282.0" onAction="#openSlider" prefHeight="78.0" prefWidth="110.0" style="-fx-background-radius: 2em;" text=" ">
+                                 <graphic>
+                                    <ImageView fitHeight="70.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/sahm_limen.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <StackPane fx:id="dialogContainer" layoutX="-85.0" layoutY="93.0" prefHeight="150.0" prefWidth="325.0" style="-fx-background-radius: 40;">
+                                  <children>
+                                      <JFXDialog fx:id="exitDialog" style="-fx-background-radius: 40;">
+                                          <JFXDialogLayout>
+                                              <body>
+                                                  <Label>Voulez vous quitter le programme</Label>
+                                              </body>
+                                              <actions>
+                                                  <JFXButton fx:id="acceptButton">ACCEPT
+                                                  </JFXButton>
+                                                  <JFXButton fx:id="declineButton">DECLINE
+                                                  </JFXButton>
+                                              </actions>
+                                          </JFXDialogLayout>
+                                      </JFXDialog>
+                                  </children>
+                              </StackPane>
+                           </children>
+                        </Pane>
+							</children>
+						</VBox>
+                  <HBox layoutX="2.0" prefHeight="38.0" prefWidth="86.0">
+                     <children>
+                        <JFXButton fx:id="crossBtn" text="">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/X_button.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="minusBtn" prefHeight="30.0" prefWidth="41.0" text="">
+                           <graphic>
+                              <ImageView fitHeight="19.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/min_button.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+					</children>
+               <effect>
+                  <DropShadow />
+               </effect>
+				</AnchorPane>
+			</children>
+		</AnchorPane>
+	</children>
+</AnchorPane>

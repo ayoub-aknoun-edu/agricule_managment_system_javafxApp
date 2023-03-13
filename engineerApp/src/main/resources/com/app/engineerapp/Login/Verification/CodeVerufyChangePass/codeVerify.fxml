@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="337.0" prefWidth="414.0" style="-fx-background-radius: 40; -fx-background-color: #8FDAFA;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.engineerapp.Login.Verification.CodeVerufyChangePass.codiVerifyController">
+   <children>
+      <ImageView fx:id="loadingimj1" fitHeight="118.0" fitWidth="116.0" layoutX="144.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/loading.gif" />
+         </image>
+      </ImageView>
+      <Pane fx:id="root" layoutX="29.0" prefHeight="337.0" prefWidth="350.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="39.0" layoutY="22.0" prefHeight="53.0" prefWidth="269.0" text="Vérifier le code">
+               <font>
+                  <Font name="Gabriola" size="43.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="-11.0" layoutY="285.0" onMouseClicked="#menuBack" prefHeight="50.0" prefWidth="116.0" style="-fx-background-color: #DF6F6F; -fx-background-radius: 40;" text="Menu principal">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="54.0" prefHeight="78.0" prefWidth="330.0" text="Entrez le code envoyé à votre email">
+               <font>
+                  <Font name="Gabriola" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="incorrectLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="350.0" style="-fx-background-color: EF0C3C; -fx-background-radius: 2em;" text="Le code que vous ave entré est incorrect" textFill="#ffe6e6">
+               <font>
+                  <Font name="Gabriola" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="loadingimj" fitHeight="46.0" fitWidth="45.0" layoutX="151.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/loading.gif" />
+               </image>
+            </ImageView>
+            <TextField fx:id="code6" layoutX="293.0" layoutY="169.0" prefHeight="54.0" prefWidth="50.0">
+               <font>
+                  <Font name="Comic Sans MS" size="25.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="verifyBtn" buttonType="RAISED" layoutX="242.0" layoutY="284.0" onAction="#checkCode" prefHeight="50.0" prefWidth="125.0" style="-fx-background-color: #95F985; -fx-background-radius: 40;" text="Vérifier le code">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <TextField fx:id="code1" layoutX="2.0" layoutY="169.0" prefHeight="54.0" prefWidth="50.0">
+               <font>
+                  <Font name="Comic Sans MS" size="25.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="code2" layoutX="58.0" layoutY="169.0" prefHeight="54.0" prefWidth="50.0">
+               <font>
+                  <Font name="Comic Sans MS" size="25.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="code3" layoutX="114.0" layoutY="169.0" prefHeight="54.0" prefWidth="50.0">
+               <font>
+                  <Font name="Comic Sans MS" size="25.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="code4" layoutX="181.0" layoutY="169.0" prefHeight="54.0" prefWidth="50.0">
+               <font>
+                  <Font name="Comic Sans MS" size="25.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="code5" layoutX="238.0" layoutY="169.0" prefHeight="54.0" prefWidth="50.0">
+               <font>
+                  <Font name="Comic Sans MS" size="25.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+   </children>
+</Pane>

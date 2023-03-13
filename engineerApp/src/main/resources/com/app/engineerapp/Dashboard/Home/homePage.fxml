@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="everything" prefHeight="662.0" prefWidth="1293.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.engineerapp.Dashboard.Home.HomePageController">
+   <children>
+      <ImageView fitHeight="662.0" fitWidth="1293.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../img/app_background.jpg" />
+         </image>
+      </ImageView>
+      <StackPane fx:id="dialogContainer" layoutX="621.0" layoutY="249.0" prefHeight="134.0" prefWidth="359.0" style="-fx-background-radius: 2em;">
+         <children>
+            <JFXDialog fx:id="exitDialog">
+               <content>
+                  <JFXDialogLayout>
+                     <body>
+                        <Label>Voulez vous quitter le programme</Label>
+                     </body>
+                     <actions>
+                        <JFXButton fx:id="acceptButton">Fermer
+
+                        </JFXButton>
+                        <JFXButton fx:id="declineButton">Annuler
+                        </JFXButton>
+                     </actions>
+                  </JFXDialogLayout>
+               </content>
+            </JFXDialog>
+         </children>
+      </StackPane>
+      <BorderPane layoutX="6.0" prefHeight="200.0" prefWidth="200.0" styleClass="left-bar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <Pane prefHeight="65.0" prefWidth="393.0" style="-fx-background-color: rgba(0,0,0,0);" HBox.hgrow="ALWAYS">
+                           <children>
+                              <ImageView fx:id="accountImg" fitHeight="50.0" fitWidth="55.0" layoutX="815.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/user.png" />
+                                 </image>
+                              </ImageView>
+                              <MenuButton layoutX="609.0" layoutY="15.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="186.0">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#MonCompte" text="Mon compte" />
+                                    <MenuItem fx:id="IngMenuItem" mnemonicParsing="false" onAction="#IngenierM" text="Ingenieurs" />
+                                    <MenuItem mnemonicParsing="false" onAction="#techniciensM" text="Techniciens" />
+                                    <MenuItem mnemonicParsing="false" onAction="#ZonesM" text="Zones" />
+                                    <MenuItem mnemonicParsing="false" onAction="#Logout" text="Déconnexion" />
+                                 </items>
+                                 <graphic>
+                                    <Label fx:id="NameLbl" alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="210.0" text="Name" textAlignment="JUSTIFY">
+                                       <font>
+                                          <Font name="Comic Sans MS" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </graphic>
+                              </MenuButton>
+                              <JFXButton fx:id="addZoneBtn" buttonType="RAISED" layoutX="323.0" layoutY="17.0" onAction="#addZoneAction" prefHeight="33.0" prefWidth="191.0" style="-fx-background-color: #BAE0B4; -fx-background-radius: 2em;" text="Ajouter Zone">
+                                 <font>
+                                    <Font name="Consolas" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="addIngBtn" buttonType="RAISED" layoutX="323.0" layoutY="17.0" onAction="#addIngAction" prefHeight="33.0" prefWidth="191.0" style="-fx-background-color: #BAE0B4; -fx-background-radius: 2em;" text="Ajouter ingenieur">
+                                 <font>
+                                    <Font name="Consolas" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="addTechBtn" buttonType="RAISED" layoutX="323.0" layoutY="17.0" onAction="#addTechAction" prefHeight="33.0" prefWidth="191.0" style="-fx-background-color: #BAE0B4; -fx-background-radius: 2em;" text="Ajouter technicien">
+                                 <font>
+                                    <Font name="Consolas" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="84.0" prefWidth="96.0" />
+                        <Pane prefHeight="84.0" prefWidth="96.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label fx:id="contextTitle" layoutX="279.0" layoutY="11.0" styleClass="appName" text="Zones">
+                                 <font>
+                                    <Font name="Consolas" size="29.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="loading" fitHeight="69.0" fitWidth="78.0" layoutX="284.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/loading.gif" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="aucuneLbl" alignment="CENTER" layoutX="160.0" layoutY="50.0" prefHeight="28.0" prefWidth="368.0" style="-fx-background-color: grey; -fx-background-radius: 40;" text="Aucune resultat trouvé" textFill="WHITE">
+                                 <font>
+                                    <Font name="Consolas" size="20.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="backBtn" fitHeight="52.0" fitWidth="95.0" layoutX="-81.0" layoutY="21.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/sahm_limenWhite.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </children></Pane>
+                        <Pane prefHeight="84.0" prefWidth="96.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="487.0" prefWidth="870.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <ScrollPane fx:id="scroll" focusTraversable="false" prefHeight="477.0" prefWidth="804.0" style="-fx-background-color: transparent;" styleClass="transparent">
+                           <content>
+                              <GridPane fx:id="grid" prefHeight="0.0" prefWidth="0.0" styleClass="gridi">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </ScrollPane>
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+         <left>
+            <VBox prefHeight="200.0" prefWidth="374.0" style="-fx-background-radius: 0 30 30 0;" styleClass="right-bar" stylesheets="@../../styles/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="69.0" prefWidth="374.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <HBox prefHeight="31.0" prefWidth="86.0">
+                           <children>
+                              <JFXButton fx:id="crossBtn" buttonType="RAISED" cancelButton="true" focusTraversable="false" prefHeight="0.0" prefWidth="0.0" text="">
+                                 <graphic>
+                                    <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/X_button.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="minusBtn" buttonType="RAISED" focusTraversable="false" prefHeight="30.0" prefWidth="41.0" text="" viewOrder="9.0">
+                                 <graphic>
+                                    <ImageView fitHeight="23.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/min_button.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <Label prefHeight="49.0" prefWidth="120.0" styleClass="appName" text="Agric" textFill="#878787">
+                           <font>
+                              <Font name="Cambria Bold" size="40.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="49.0" prefWidth="81.0" styleClass="appName" text="App" textFill="#878787">
+                           <font>
+                              <Font name="Cambria" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="-60.0" />
+                     </padding>
+                  </HBox>
+                  <Pane prefHeight="29.0" prefWidth="435.0" VBox.vgrow="ALWAYS" />
+                  <VBox fx:id="chosenZoneCard" alignment="CENTER" prefHeight="419.0" prefWidth="334.0" style="-fx-background-radius: 0;" stylesheets="@../../styles/style.css">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="335.0">
+                           <children>
+                              <Label fx:id="zoneId" contentDisplay="CENTER" prefHeight="48.0" prefWidth="173.0" text="Zone" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="36.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" top="30.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="53.0" prefWidth="335.0">
+                           <children>
+                              <Label prefHeight="38.0" prefWidth="80.0" text="adress" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="adressLbl1" alignment="CENTER" prefHeight="32.0" prefWidth="268.0" text="meknes 12, ?????" textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="26.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="53.0" prefWidth="374.0">
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                           <children>
+                              <Label prefHeight="37.0" prefWidth="131.0" text="proprietaire" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="proprNom" alignment="CENTER" prefHeight="32.0" prefWidth="200.0" text="prop" textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="26.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="53.0" prefWidth="374.0">
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                           <children>
+                              <Label alignment="CENTER" prefHeight="32.0" prefWidth="147.0" text="Date Examin" textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="dataExaminLbl" alignment="CENTER" prefHeight="32.0" prefWidth="219.0" text="Date Examin" textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="26.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="208.0" prefHeight="53.0" prefWidth="374.0">
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                           <children>
+                              <Label alignment="CENTER" prefHeight="32.0" prefWidth="147.0" text="Produit" textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="produitNom" alignment="CENTER" prefHeight="32.0" prefWidth="219.0" text="produit" textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="26.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="53.0" prefWidth="335.0">
+                           <children>
+                              <Label prefHeight="39.0" prefWidth="129.0" text="Surface" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="surfaceLbl" alignment="CENTER" prefHeight="53.0" prefWidth="167.0" text="9000 HK" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="45.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <Separator prefHeight="0.0" prefWidth="118.0" />
+                              <Separator prefHeight="0.0" prefWidth="118.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="79.0" prefWidth="334.0" spacing="20.0">
+                           <children>
+                              <JFXButton onAction="#showRapports" style="-fx-background-color: #FFFFFF; -fx-background-radius: 100;" text="rapports" textFill="#828282">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton onAction="#ModifierZone" style="-fx-background-color: #FFFFFF; -fx-background-radius: 100;" text="Modifier" textFill="#828282">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                     <styleClass>
+                        <String fx:value="chosen-card" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <Pane layoutX="10.0" layoutY="715.0" prefHeight="43.0" prefWidth="435.0" />
+                  <Pane fx:id="chozenRespoCardContainer" prefHeight="43.0" prefWidth="435.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox fx:id="chosenRespoCard" alignment="CENTER" layoutX="20.0" layoutY="-425.0" prefHeight="447.0" prefWidth="335.0" stylesheets="@../../styles/style.css">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="323.0">
+                                 <children>
+                                    <Label fx:id="ingenId" contentDisplay="CENTER" prefHeight="44.0" prefWidth="280.0" text="Ingenieur" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria" size="30.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="30.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="53.0" prefWidth="335.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="32.0" prefWidth="82.0" text="Nom:" textAlignment="RIGHT" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="nameChosen" alignment="CENTER" layoutX="10.0" layoutY="19.0" prefHeight="32.0" prefWidth="175.0" text="nom prenom" textAlignment="RIGHT" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="53.0" prefWidth="374.0">
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="32.0" prefWidth="75.0" text="Email:" textAlignment="RIGHT" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="emailChosen" alignment="CENTER" layoutX="10.0" layoutY="20.0" prefHeight="32.0" prefWidth="263.0" text="email" textAlignment="RIGHT" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="53.0" prefWidth="348.0">
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="32.0" prefWidth="112.0" text="Tele:" textAlignment="RIGHT" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="teleChosen" alignment="CENTER" layoutX="10.0" layoutY="20.0" prefHeight="32.0" prefWidth="272.0" text="tele" textAlignment="RIGHT" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="53.0" prefWidth="335.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="32.0" prefWidth="159.0" text="Date ambach:" textAlignment="RIGHT" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="dateEmbChosen" alignment="CENTER" layoutX="10.0" layoutY="19.0" prefHeight="32.0" prefWidth="185.0" text="date ambach" textAlignment="RIGHT" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="319.0" prefHeight="53.0" prefWidth="335.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="32.0" prefWidth="173.0" text="Date naissance:" textAlignment="RIGHT" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="dataNaissChosen" alignment="CENTER" layoutX="10.0" layoutY="19.0" prefHeight="32.0" prefWidth="163.0" text="date naissance" textAlignment="RIGHT" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="346.0" prefHeight="53.0" prefWidth="335.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="32.0" prefWidth="167.0" text="Compte status:" textAlignment="RIGHT" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="compteStChosen" alignment="CENTER" layoutX="10.0" layoutY="19.0" prefHeight="32.0" prefWidth="173.0" text="compte status" textAlignment="RIGHT" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="362.0" prefHeight="53.0" prefWidth="335.0">
+                                 <children>
+                                    <Label fx:id="responsableTxf" alignment="CENTER" prefHeight="32.0" prefWidth="168.0" textAlignment="RIGHT" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria Bold" size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="respoName" alignment="CENTER" layoutX="10.0" layoutY="19.0" prefHeight="32.0" prefWidth="173.0" textAlignment="RIGHT" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria" size="26.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <JFXButton onAction="#modifierAccountAction" style="-fx-background-color: #FFFFFF; -fx-background-radius: 100;" text="Modifier" textFill="#828282">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                           <styleClass>
+                              <String fx:value="chosen-card" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                        </VBox>
+                     </children></Pane>
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

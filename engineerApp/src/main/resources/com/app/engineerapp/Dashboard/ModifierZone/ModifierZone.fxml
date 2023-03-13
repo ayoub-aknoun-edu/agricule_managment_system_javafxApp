@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="all" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="583.0" style="-fx-background-radius: 2em;" styleClass="PublierRoot" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.engineerapp.Dashboard.ModifierZone.ModifierZoneController">
+   <children>
+      <AnchorPane fx:id="slider" layoutY="64.0" prefHeight="406.0" prefWidth="583.0" styleClass="PublierRoot">
+         <children>
+            <Line endX="-47.0" endY="-67.0" layoutX="633.0" layoutY="67.0" startX="-47.0" startY="338.0" />
+            <Line endX="-47.0" endY="-67.0" layoutX="627.0" layoutY="66.0" startX="-47.0" startY="338.0" />
+            <JFXTextField fx:id="proprietaireText" focusColor="#2012ee" layoutX="46.0" layoutY="69.0" opacity="0.72" prefHeight="45.0" prefWidth="223.0" promptText="Proprietaire" unFocusColor="#0f9a9a">
+               <font>
+                  <Font name="HoloLens MDL2 Assets" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="surfaceText" focusColor="#2012ee" layoutX="316.0" layoutY="69.0" opacity="0.72" prefHeight="45.0" prefWidth="223.0" promptText="Surface" unFocusColor="#0f9a9a">
+               <font>
+                  <Font name="HoloLens MDL2 Assets" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="adresseText" alignment="CENTER" focusColor="#2012ee" layoutX="46.0" layoutY="125.0" opacity="0.72" prefHeight="45.0" prefWidth="496.0" promptText="Adresse" unFocusColor="#0f9a9a">
+               <font>
+                  <Font name="HoloLens MDL2 Assets" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="produitsText" alignment="CENTER" focusColor="#2012ee" layoutX="46.0" layoutY="181.0" opacity="0.72" prefHeight="45.0" prefWidth="496.0" promptText="Proudits separé par ;" unFocusColor="#0f9a9a">
+               <font>
+                  <Font name="HoloLens MDL2 Assets" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="responsableCombo" layoutX="248.0" layoutY="294.0" prefHeight="25.0" prefWidth="250.0" unFocusColor="#0f9a9a" />
+            <Label fx:id="respoLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="46.0" layoutY="292.0" prefHeight="28.0" prefWidth="137.0" text="Responsable :">
+               <font>
+                  <Font name="Constantia Italic" size="23.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="examinateurCombo" layoutX="246.0" layoutY="248.0" prefHeight="25.0" prefWidth="250.0" unFocusColor="#0f9a9a" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="46.0" layoutY="246.0" prefHeight="28.0" prefWidth="137.0" text="Examinateur:">
+               <font>
+                  <Font name="Constantia Italic" size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="39.0" layoutY="41.0" prefHeight="28.0" prefWidth="198.0" text="Doit être examiner:">
+               <font>
+                  <Font name="Constantia Italic" size="23.0" />
+               </font>
+            </Label>
+            <JFXToggleButton fx:id="isNeedExam" layoutX="317.0" layoutY="26.0" prefHeight="58.0" prefWidth="85.0" text=" " />
+            <ImageView fitHeight="28.0" fitWidth="25.0" layoutX="377.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/done.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="25.0" layoutX="305.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/cancel.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="174.0" layoutY="6.0" prefHeight="53.0" prefWidth="296.0" text="Modifier zone">
+         <font>
+            <Font name="Gabriola" size="35.0" />
+         </font>
+         <styleClass>
+            <String fx:value="ModifyText" />
+            <String fx:value="publishText" />
+         </styleClass>
+      </Label>
+      <JFXButton fx:id="valideBtn" buttonType="RAISED" layoutX="342.0" layoutY="491.0" onAction="#valide" prefHeight="32.0" prefWidth="156.0" style="-fx-background-color: #BCEBD7; -fx-background-radius: 2em;" text="modifeir zone">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="suivBtn" buttonType="RAISED" layoutX="74.0" layoutY="491.0" onAction="#menuBack" prefHeight="32.0" prefWidth="156.0" style="-fx-background-color: #BCEBD7; -fx-background-radius: 2em;" text="Menu back">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="closeBtn" layoutX="1.0" layoutY="6.0" onAction="#menuBack" prefHeight="35.0" prefWidth="33.0" styleClass="section_Transparant" stylesheets="@../../styles/style.css" text=" ">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/X_button.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ImageView fx:id="loadingimj" fitHeight="35.0" fitWidth="43.0" layoutX="447.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/loading.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

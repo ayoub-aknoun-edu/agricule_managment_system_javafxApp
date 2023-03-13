@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="38.0" prefWidth="547.0" style="-fx-background-radius: 2em; -fx-background-color: white;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.engineerapp.Dashboard.Rapports.RapportController">
+   <children>
+      <Label fx:id="nameLabel" layoutX="37.0" layoutY="4.0" prefHeight="37.0" prefWidth="190.0" style="-fx-text-fill: black;" text="Audi">
+         <font>
+            <Font name="Cambria" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="484.0" layoutY="3.0" onMouseClicked="#delete" prefHeight="28.0" prefWidth="37.0" style="-fx-background-color: #E50C4C; -fx-background-radius: 30;" text="">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="openAnn" buttonType="RAISED" focusTraversable="false" layoutX="414.0" layoutY="3.0" onMouseClicked="#open" prefHeight="28.0" prefWidth="37.0" style="-fx-background-color: #7D6BDD; -fx-background-radius: 30;" text="">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/eyeOpened.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label fx:id="dateLabel" layoutX="230.0" layoutY="4.0" prefHeight="37.0" prefWidth="164.0" style="-fx-text-fill: black;" text="Audi">
+         <font>
+            <Font name="Cambria" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

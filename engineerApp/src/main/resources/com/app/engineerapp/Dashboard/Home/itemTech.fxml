@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="257.0" prefWidth="203.0" style="-fx-background-radius: 25;" stylesheets="@../../styles/style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.engineerapp.Dashboard.Home.ItemTechController">
+    <children>
+      <ImageView fitHeight="244.0" fitWidth="206.0" pickOnBounds="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+         <image>
+            <Image url="@../../img/employee_card.png" />
+         </image>
+      </ImageView>
+        <JFXButton buttonType="RAISED" focusTraversable="false" layoutY="220.0" onAction="#click" prefHeight="37.0" prefWidth="206.0" style="-fx-background-color: #57C690; -fx-background-radius: 30;" text="Select">
+            <font>
+                <Font name="Calibri" size="20.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+      <Label fx:id="respoId" layoutX="9.0" layoutY="14.0" prefHeight="30.0" prefWidth="192.0" text="Technicien :" textFill="#d3d1d1">
+         <font>
+            <Font name="Consolas Bold" size="19.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <Label fx:id="nomLbl" alignment="CENTER" layoutX="36.0" layoutY="50.0" prefHeight="23.0" prefWidth="148.0" text="Nom" textFill="WHITE">
+         <font>
+            <Font name="Consolas Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="prenomLbl" alignment="CENTER" layoutX="37.0" layoutY="74.0" prefHeight="23.0" prefWidth="148.0" text="Prenom" textFill="WHITE">
+         <font>
+            <Font name="Consolas Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="emailLbl" accessibleHelp="Email" accessibleRole="TEXT_AREA" accessibleText="Email" alignment="CENTER" cache="true" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="7.0" layoutY="165.0" prefHeight="22.0" prefWidth="194.0" text="emailemail@email.email">
+         <font>
+            <Font name="Calisto MT Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="teleLbl" alignment="CENTER" layoutX="20.0" layoutY="190.0" prefHeight="17.0" prefWidth="161.0" text="num_tele">
+         <font>
+            <Font name="Comic Sans MS Italic" size="16.0" />
+         </font>
+      </Label>
+    </children>
+    <styleClass>
+        <String fx:value="fruit-item" />
+        <String fx:value="shadow" />
+    </styleClass>
+</AnchorPane>

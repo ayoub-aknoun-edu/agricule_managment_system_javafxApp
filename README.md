@@ -11,7 +11,8 @@
 
 ## Introduction
 
-    This is an application for engineers to manage several resources related to agriculture, including zones agricoles, employers, and creating templates for rapports. The application is built using JavaFX and Maven.
+    This is an application for engineers to manage several resources related to agriculture,  
+    including zones agricoles, employers, and creating templates for rapports. The application is built using JavaFX and Maven.
 
 ## Requirements
 
@@ -27,7 +28,8 @@
 
 ## Usage
 
-    Upon launching the application, you will be presented with a login screen. Enter your credentials to access the main dashboard, where you can manage the various resources.  
+    Upon launching the application, you will be presented with a login screen.  
+    Enter your credentials to access the main dashboard, where you can manage the various resources.  
 
 >#### Zones Agricoles  
     In the zones agricoles section, you can add, edit, or delete zones, as well as view details about each zone. You can also view a map of all zones, and filter by various criteria such as crop type or soil quality.
